@@ -1,2 +1,13 @@
+eureka:
+  server:
+    instance:
+      hostname: localhost
+      port: 8761
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.server.instance.hostname}:${eureka.server.instance.port}/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+
 info:
   me: https://github.com/marvinwjs/learningcloud.git
