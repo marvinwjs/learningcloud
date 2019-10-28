@@ -1,0 +1,6 @@
+security:
+  basic:
+    enabled: ture
+  user:
+    name: root
+    password: root
