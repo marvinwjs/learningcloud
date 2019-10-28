@@ -7,6 +7,8 @@ eureka:
     serviceUrl:
       defaultZone: http://${eureka.server.instance.hostname}:${eureka.server.instance.port}/eureka/
   instance:
+    lease-expiration-duration-in-seconds: 30
+    lease-renewal-interval-in-seconds: 10
     instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
 
 info:

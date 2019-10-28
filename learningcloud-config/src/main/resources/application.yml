@@ -1,17 +1,8 @@
 server:
-  port: 8761
+  port: 8765
 spring:
   profiles:
     active: dev
   application:
-    name: eureka-server
-eureka:
-  server:
-    enable-self-preservation: false
-  instance:
-    hostname: localhost
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    name: learningcloud-config
+

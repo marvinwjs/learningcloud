@@ -1,6 +1,7 @@
-security:
-  basic:
-    enabled: ture
-  user:
-    name: root
-    password: root
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/marvinwjs/learningcloud.git
+          searchPaths: /config-repo

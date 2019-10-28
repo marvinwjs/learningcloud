@@ -10,6 +10,7 @@
     <modules>
         <module>learningcloud-eureka</module>
         <module>learningcloud-config</module>
+        <module>learningcloud-gateway</module>
     </modules>
     <packaging>pom</packaging>
 
