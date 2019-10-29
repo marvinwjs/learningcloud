@@ -1,0 +1,13 @@
+server:
+  port: 8766
+spring:
+  profiles:
+    active: dev
+  application:
+    name: learningcloud-gateway
+  cloud:
+    config:
+      profile: dev
+      discovery:
+        service-id: LEARNINGCLOUD-CONFIG
+        enabled: true

@@ -12,5 +12,10 @@
     <groupId>com.learningcloud</groupId>
     <artifactId>learningcloud-gateway</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+    </dependencies>
 </project>
