@@ -1,0 +1,13 @@
+server:
+  port: 9092
+spring:
+  profiles:
+    active: dev
+  application:
+    name: learningcloud-service-user
+  cloud:
+    config:
+      profile: dev
+      discovery:
+        service-id: LEARNINGCLOUD-CONFIG
+        enabled: true
