@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true">
+
   <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
   <conversionRule conversionWord="wex" converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter" />
   <conversionRule conversionWord="wEx" converterClass="org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter" />
@@ -12,10 +13,9 @@
   <property name="FILE_LOG_PATTERN" value="${FILE_LOG_PATTERN:-%d{yyyy-MM-dd HH:mm:ss.SSS} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } --- [%t] %-40.40logger{39} : %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"/>
   <!--控制台-->
   <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
-    <filter class="ch.qos.logback.classic.filter.LevelFilter">
+    <!-- 过滤器控制只记录DEBUG及以上级别的控制 -->
+    <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
       <level>DEBUG</level>
-      <onMatch>ACCEPT</onMatch>
-      <onMismatch>ACCEPT</onMismatch>
     </filter>
     <encoder>
       <pattern>${CONSOLE_LOG_PATTERN}</pattern>
@@ -34,21 +34,23 @@
     <filter class="ch.qos.logback.classic.filter.LevelFilter">
         <level>WARN</level>
         <onMatch>ACCEPT</onMatch>
-          <onMismatch>ACCEPT</onMismatch>
+        <onMismatch>ACCEPT</onMismatch>
     </filter>
     <filter class="ch.qos.logback.classic.filter.LevelFilter">
         <level>INFO</level>
         <onMatch>ACCEPT</onMatch>
-          <onMismatch>DENY</onMismatch>
-    </filter> -->
+        <onMismatch>DENY</onMismatch>
+    </filter>
     <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
       <fileNamePattern>${LOG_PATH}/info_%d{yyyy_MM_dd}.log</fileNamePattern>
+      <!--日志文件保留天数-->
+      <maxHistory>15</maxHistory>
     </rollingPolicy>
     <encoder>
       <pattern>${FILE_LOG_PATTERN}</pattern>
     </encoder>
   </appender>
-
+  <!-- 控制错误日志打印文件 -->
   <appender name="ERROR-FILE-APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
     <file>${LOG_ERROR_FILE}</file>
     <filter class="ch.qos.logback.classic.filter.LevelFilter">
@@ -63,6 +65,13 @@
       <pattern>${FILE_LOG_PATTERN}</pattern>
     </encoder>
   </appender>
+
+  <springProfile name="dev">
+    <root level="info">
+      <!-- 开发环境控制台打印 -->
+      <appender-ref ref="CONSOLE" />
+    </root>
+  </springProfile>
 
   <root level="info">
     <appender-ref ref="CONSOLE" />

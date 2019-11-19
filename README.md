@@ -1,11 +1,9 @@
-## Spring Cloud 学习
+# LearningCloud
+------
 
-### 版本说明
-SpringBoot 2.2.0
+本项目内容为SpringCloud深度学习并实战的项目，包括：
 
-### 项目结构：
-LearningCloud:
-
-    learningcloud-eureka   ---------注册中心< br >
-    leanringcloud-config   ---------配置中心< br >
-    leanringcloud-gateway  ---------网关路由< br >
+> * SpringCloud Eureka
+> * SpringCloud Config
+> * SpringCloud Gateway
+> * SpringCloud Service

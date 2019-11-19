@@ -1,0 +1,8 @@
+${AnsiColor.GREEN}  ___ ___          .__   .__            ${AnsiColor.RED} __      __               .__       .___
+${AnsiColor.GREEN} /   |   \   ____  |  |  |  |    ____   ${AnsiColor.RED}/  \    /  \ ____ _______ |  |    __| _/
+${AnsiColor.GREEN}/    ~    \_/ __ \ |  |  |  |   /  _ \  ${AnsiColor.RED}\   \/\/   //  _ \\_  __ \|  |   / __ |
+${AnsiColor.GREEN}\    ~    /\  ___/ |  |__|  |__(  <_> ) ${AnsiColor.RED} \        /(  <_> )|  | \/|  |__/ /_/ |
+${AnsiColor.GREEN} \___|___/  \___ _>|____/|____/ \____/  ${AnsiColor.RED}  \__/\__/  \____/ |__|   |____/\____ |
+
+  ${AnsiColor.BRIGHT_GREEN}:: Spring Boot  :: Running Spring Boot ${spring-boot.version} ::
+  :: https://marvinwjs.github.io/ ::${AnsiColor.DEFAULT}

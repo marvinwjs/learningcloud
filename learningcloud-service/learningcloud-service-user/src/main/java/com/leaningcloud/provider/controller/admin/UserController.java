@@ -17,9 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     @Value("${info.me}")
     private String info;
+
     @GetMapping("/info")
-    public String getApiVersion() {
+    public String getAboutInfo() {
         return info;
     }
-
 }

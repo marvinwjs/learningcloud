@@ -11,7 +11,7 @@
         <module>learningcloud-eureka</module>
         <module>learningcloud-config</module>
         <module>learningcloud-gateway</module>
-        <module>comlearningcloud-service</module>
+        <module>learningcloud-service</module>
     </modules>
     <packaging>pom</packaging>
 
