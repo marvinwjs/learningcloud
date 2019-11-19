@@ -19,7 +19,6 @@ public class UserController {
     private String info;
     @GetMapping("/info")
     public String getApiVersion() {
-        System.out.println(info);
         return info;
     }
 

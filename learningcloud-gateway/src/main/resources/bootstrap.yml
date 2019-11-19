@@ -11,17 +11,3 @@ spring:
       discovery:
         service-id: LEARNINGCLOUD-CONFIG
         enabled: true
-
-zuul:
-  routes:
-    user-service:
-      path: /user-service/**
-      serviceId: learningcloud-service-user
-      ribbon:
-        eager-load:
-          enabled: true
-        MaxAutoRetries: 1
-        MaxAutoRetriesNextServer: 2
-        OkToRetryOnAllOperations: false
-        ConnectTimeout: 10000
-        ReadTimeout: 10000
