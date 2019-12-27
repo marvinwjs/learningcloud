@@ -1,8 +1,9 @@
-package com.learningcloud.eureka.server;
+package com.learningcloud.eureka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * eureka server start
